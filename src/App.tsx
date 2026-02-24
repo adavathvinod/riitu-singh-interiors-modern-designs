@@ -7,6 +7,7 @@ import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingIcons from "@/components/FloatingIcons";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 
 const About = lazy(() => import("./pages/About"));
@@ -24,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center font-body text-muted-foreground">Loading...</div>}>
           <Routes>
